@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Create Event">
+        <div class="slds-var-p-around_medium">
+            <lightning-input label="Event Name" value={eventName} onchange={handleEventNameChange} ></lightning-input>
+            <lightning-input type="datetime-local" label="Event Date"  onchange={handleEventDateChange} ></lightning-input>
+            <lightning-input label="Location" value={eventLocation} onchange={handleEventLocationChange} ></lightning-input >
+            <lightning-input type="number" label="Capacity" value={eventCapacity} onchange={handleEventCapacityChange} ></lightning-input>
+            <lightning-combobox label="Status" value={status} options={statusOptions} onchange={handleEventStatusChange}></lightning-combobox>
+            <lightning-input type="datetime-local" label="Registration DeadLine"  onchange={handleDateTimeChange}></lightning-input>
+            <lightning-button label="Create Event " variant="brand" onclick={createEvent} ></lightning-button>
+        </div>
+    </lightning-card>
+</template>
